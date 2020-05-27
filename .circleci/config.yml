@@ -1,0 +1,14 @@
+version: 2.1
+orbs:
+  apex: circleci/salesforce-apex@dev:first
+
+workflows:
+  basic-test:
+    jobs:
+      - apex/scratch-deploy-and-test:
+          scratch-alias: "ebikes-ci"
+          scratch-def: "./config/project-scratch-def.json"
+          permset: "ebikes-ci"
+          sampledata-path: "./data/sample-data-plan.json"
+          deploydir: "./mdapiDeploy/unpackaged"
+          defaultusername: "circleci"
