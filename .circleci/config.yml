@@ -11,4 +11,4 @@ workflows:
           permset: "ebikes-ci"
           sampledata-path: "./data/sample-data-plan.json"
           deploydir: "./mdapiDeploy/unpackaged"
-          defaultusername: "circleci"
+          defaultusername: "gabriel@circleci.cpe"
