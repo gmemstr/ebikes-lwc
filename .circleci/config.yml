@@ -7,7 +7,7 @@ jobs:
     docker:
       - image: cimg/node:12.6
     steps:
-      - sfdx/install
+      - sfdx-cli/install
 
 workflows:
   basic-test:
