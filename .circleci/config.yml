@@ -7,7 +7,7 @@ jobs:
     docker:
       - image: cimg/node:12.6
     steps:
-      - sfdx-cli/install
+      - apex/install
 
 workflows:
   basic-test:
