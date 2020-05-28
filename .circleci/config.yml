@@ -2,9 +2,17 @@ version: 2.1
 orbs:
   apex: circleci/salesforce-apex@dev:alpha
 
+jobs:
+  cli-test:
+    docker:
+      - image: cimg/node:12.6
+    steps:
+      - sfdx/install
+
 workflows:
   basic-test:
     jobs:
+      - cli-test
       - apex/scratch-deploy-and-test:
           scratch-alias: "ebikes-ci"
           scratch-def: "./config/project-scratch-def.json"
